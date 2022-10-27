@@ -1,5 +1,6 @@
 const tg = window.Telegram.WebApp;
-export function useTelegram(){
+
+export function useTelegram() {
 
     const onClose = () => {
         tg.close()
@@ -9,15 +10,15 @@ export function useTelegram(){
         if(tg.MainButton.isVisible) {
             tg.MainButton.hide();
         } else {
-            tg.MainButton.show()
+            tg.MainButton.show();
         }
     }
 
     return {
         onClose,
-        onToggleButton, 
+        onToggleButton,
         tg,
-        user: tg.initDataUnsafe?.user?
+        user: tg.initDataUnsafe?.user,
+        queryId: tg.initDataUnsafe?.query_id,
     }
-
 }
