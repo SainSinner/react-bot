@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ProductList.css';
 
-const PProductList = () => {
+const ProductList = () => {
     return(
         <div >
             LIST
