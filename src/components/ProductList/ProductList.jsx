@@ -37,8 +37,8 @@ const ProductList = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data)
-        });
-    }, [addedItems, queryId]) // Нужно ли добавить queryId?
+        })
+    },  [addedItems, queryId]) // Нужно ли добавить queryId?
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
