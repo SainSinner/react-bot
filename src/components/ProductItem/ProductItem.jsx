@@ -17,8 +17,8 @@ const ProductItem = ({product, className, onAdd}) => {
             <div className={'price'}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
-            <Button disabled:true className={'add-btn'} onClick={onAddHandler}>
-                Добавить в корзину
+            <Button disabled onClick={onAddHandler}>
+                Disabled Button
             </Button>
             <Button className={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
