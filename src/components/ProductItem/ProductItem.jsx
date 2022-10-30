@@ -8,6 +8,16 @@ const ProductItem = ({product, className, onAdd}) => {
         onAdd(product);
     }
 
+    const [quantity, setQuantity] = useState(0)
+
+    function addQuantity() {
+        setQuantity(quantity + 1)
+    }
+
+    function removeQuantity() {        
+        setQuantity(quantity - 1)
+    }
+
 
     return(
         <div className={'product ' + className}>
@@ -17,9 +27,11 @@ const ProductItem = ({product, className, onAdd}) => {
             <div className={'price'}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
-            <Button disabled onClick={onAddHandler}>
-                Disabled Button
+            <Button disabled>
+                {quantity}
             </Button>
+            <Button onClick={addQuantity}>+</Button>
+            <Button onClick={removeQuantity}>-</Button>
             <Button disabled sclassName={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
             </Button>
