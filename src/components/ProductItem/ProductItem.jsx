@@ -28,7 +28,7 @@ const ProductItem = ({product, className, onAdd}) => {
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
             <Button disabled>
-                {quantity}
+                {quantity * product.price}
             </Button>
             <Button onClick={addQuantity}>+</Button>
             <Button onClick={removeQuantity}>-</Button>
