@@ -1,21 +1,12 @@
 import React, {useState} from 'react';
 import Button from "../Button/Button";
+import Counter from '../Counter/Counter';
 import './ProductItem.css';
 
 const ProductItem = ({product, className, onAdd}) => {
     
     const onAddHandler = () => {
         onAdd(product);
-    }
-
-    const [quantity, setQuantity] = useState(0)
-
-    function addQuantity() {
-        setQuantity(quantity + 1)
-    }
-
-    function removeQuantity() {        
-        setQuantity(quantity - 1)
     }
 
 
@@ -27,11 +18,8 @@ const ProductItem = ({product, className, onAdd}) => {
             <div className={'price'}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
-            <Button disabled>
-                {quantity * product.price}
-            </Button>
-            <Button onClick={addQuantity}>+</Button>
-            <Button onClick={removeQuantity}>-</Button>
+            <Counter/>
+            <Counter/>
             <Button disabled sclassName={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
             </Button>
