@@ -20,7 +20,7 @@ const ProductItem = ({product, className, onAdd}) => {
             <Button disabled onClick={onAddHandler}>
                 Disabled Button
             </Button>
-            <Button className={'add-btn'} onClick={onAddHandler}>
+            <Button disabled sclassName={'add-btn'} onClick={onAddHandler}>
                 Добавить в корзину
             </Button>
         </div>
